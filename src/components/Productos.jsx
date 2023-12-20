@@ -1,8 +1,16 @@
+import styled from '@emotion/styled'
+
 import Producto from "./Producto"
+
+const Container = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+`
 
 const Productos = ({ productos, agregarAlCarro }) => {
   return (
-    <div>
+    <Container>
       {productos.map(producto => (
         <Producto
           key={producto.name}
@@ -10,7 +18,7 @@ const Productos = ({ productos, agregarAlCarro }) => {
           agregarAlCarro={agregarAlCarro}
         />
       ))}
-    </div>
+    </Container>
   )
 }
 
