@@ -5,14 +5,14 @@ const BubbleCustom = styled.span`
   border-radius: 15px;
   color: #fff;
   font-weight: bold;
-  padding: 2px 10px;
+  padding: 3px 10px;
   font-size: .9rem;
 `
 
 const BubbleAlert = ({ value }) => {
 
   const getNumber = n => {
-    if (!n) return ' '
+    if (!n) return ''
     return n > 9 ? '9+' : n
   }
 

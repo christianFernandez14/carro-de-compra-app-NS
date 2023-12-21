@@ -17,11 +17,16 @@ const Bubble = styled.span`
   left: 12px;
   top: 22px;
 `
-const Carro = () => {
+const Carro = ({ carro }) => {
+
+  const cantidad = carro.reduce((acc, elem) => acc + elem.cantidad, 0)
+
   return (
     <div>
       <Bubble>
-        <BubbleAlert value={10}/>
+        {cantidad != 0
+          && <BubbleAlert value={cantidad} />       
+        }
       </Bubble>
       <Button>
         Carro

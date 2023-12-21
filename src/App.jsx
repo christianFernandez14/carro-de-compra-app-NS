@@ -48,7 +48,9 @@ const App = () => {
   return (
 
     <div>
-      <NavBar />
+      <NavBar
+        carro={carro}
+      />
       <Layout>
         <Titulo />
         <Productos
