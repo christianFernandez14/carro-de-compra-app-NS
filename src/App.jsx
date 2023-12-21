@@ -15,6 +15,7 @@ const App = () => {
 
   const [productos, setProductos] = useState([])
   const [carro, setCarro] = useState([])
+  const [carroVisible, setCarroVisible] = useState(false)
 
   useEffect(() => {
     const cargandoProdutos = () => {
@@ -45,11 +46,16 @@ const App = () => {
     }
   }
 
+  const mostrarCarro = () => {
+    setCarroVisible(!carroVisible)
+  }
   return (
 
     <div>
       <NavBar
         carro={carro}
+        carroVisible={carroVisible}
+        mostrarCarro={mostrarCarro}
       />
       <Layout>
         <Titulo />

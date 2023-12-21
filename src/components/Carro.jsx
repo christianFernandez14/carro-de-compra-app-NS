@@ -19,7 +19,7 @@ const Bubble = styled.span`
   left: 12px;
   top: 22px;
 `
-const Carro = ({ carro }) => {
+const Carro = ({ carro, carroVisible, mostrarCarro }) => {
 
   const cantidad = carro.reduce((acc, elem) => acc + elem.cantidad, 0)
 
@@ -30,12 +30,12 @@ const Carro = ({ carro }) => {
           && <BubbleAlert value={cantidad} />
         }
       </Bubble>
-      <Button>
+      <Button
+        onClick={() => mostrarCarro()}
+      >
         Carro
       </Button>
-      <DetalleCarro
-        carro={carro}
-      />
+      {carroVisible && <DetalleCarro carro={carro} />}
     </div>
   )
 }
