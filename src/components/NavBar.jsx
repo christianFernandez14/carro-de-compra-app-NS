@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 
+import Logo from "./Logo";
+
 const Nav = styled.nav`
 
   height: 100px;
@@ -15,7 +17,7 @@ const Nav = styled.nav`
 const NavBar = () => {
   return (
     <Nav>
-      <p>Logo</p>
+      <Logo />
       <p>Carro</p>
     </Nav>
   )
