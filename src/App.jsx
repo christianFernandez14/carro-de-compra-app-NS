@@ -24,10 +24,25 @@ const App = () => {
   }, [])
 
   const agregarAlCarro = producto => {
-    setCarro([
-      ...carro,
-      { ...producto, cantidad: 1 }
-    ])
+
+    const productoExistente = carro.find(elem => elem.name === producto.name)
+
+    if (productoExistente) {
+      // Si existe el elemento aumento la cantidad del producto en state
+      const newCarro = carro.map(elem => (
+        elem.name === producto.name
+          ? ({ ...elem, cantidad: elem.cantidad + 1 })
+          : elem
+      ))
+      setCarro(newCarro)
+
+    } else {
+      // Si no existe lo agrego al state
+      setCarro([
+        ...carro,
+        { ...producto, cantidad: 1 }
+      ])
+    }
   }
 
   return (
