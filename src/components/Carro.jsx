@@ -1,6 +1,8 @@
 import styled from "@emotion/styled"
 
 import BubbleAlert from './BubbleAlert'
+import DetalleCarro from "./DetalleCarro";
+
 
 const Button = styled.button`
   background-color: #359a2c;
@@ -25,12 +27,15 @@ const Carro = ({ carro }) => {
     <div>
       <Bubble>
         {cantidad != 0
-          && <BubbleAlert value={cantidad} />       
+          && <BubbleAlert value={cantidad} />
         }
       </Bubble>
       <Button>
         Carro
       </Button>
+      <DetalleCarro
+        carro={carro}
+      />
     </div>
   )
 }
