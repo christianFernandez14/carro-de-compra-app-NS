@@ -14,6 +14,7 @@ const array = [
 const App = () => {
 
   const [productos, setProductos] = useState([])
+  const [carro, setCarro] = useState([])
 
   useEffect(() => {
     const cargandoProdutos = () => {
@@ -21,6 +22,13 @@ const App = () => {
     }
     cargandoProdutos()
   }, [])
+
+  const agregarAlCarro = producto => {
+    setCarro([
+      ...carro,
+      { ...producto, cantidad: 1 }
+    ])
+  }
 
   return (
 
@@ -30,7 +38,7 @@ const App = () => {
         <Titulo />
         <Productos
           productos={productos}
-          agregarAlCarro={() => console.log('Agregando al carro')}
+          agregarAlCarro={agregarAlCarro}
         />
       </Layout>
     </div>
