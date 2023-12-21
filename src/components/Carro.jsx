@@ -21,7 +21,7 @@ const Carro = () => {
   return (
     <div>
       <Bubble>
-        <BubbleAlert />
+        <BubbleAlert value={10}/>
       </Bubble>
       <Button>
         Carro

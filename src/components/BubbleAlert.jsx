@@ -9,10 +9,16 @@ const BubbleCustom = styled.span`
   font-size: .9rem;
 `
 
-const BubbleAlert = () => {
+const BubbleAlert = ({ value }) => {
+
+  const getNumber = n => {
+    if (!n) return ' '
+    return n > 9 ? '9+' : n
+  }
+
   return (
     <BubbleCustom>
-      9
+      {getNumber(value)}
     </BubbleCustom>
   )
 }
