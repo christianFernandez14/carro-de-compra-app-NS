@@ -8,8 +8,6 @@ const ButtonCustom = styled.button`
   border: none;
   border-radius: 10px;
   cursor: pointer;
-
-
 `
 const Button = ({ children, onClick }) => {
   return (

@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 
+import Layout from "./components/Layout";
 import Productos from "./components/Productos";
 
 const array = [
@@ -20,12 +21,14 @@ const App = () => {
   }, [])
 
   return (
-    <div>
+
+    <Layout>
       <Productos
         productos={productos}
         agregarAlCarro={() => console.log('Agregando al carro')}
       />
-    </div>
+    </Layout>
+    
   )
 }
 
