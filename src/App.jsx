@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 
+import NavBar from "./components/NavBar"
 import Layout from "./components/Layout";
+import Titulo from "./components/Titulo"
 import Productos from "./components/Productos";
 
 const array = [
@@ -22,13 +24,17 @@ const App = () => {
 
   return (
 
-    <Layout>
-      <Productos
-        productos={productos}
-        agregarAlCarro={() => console.log('Agregando al carro')}
-      />
-    </Layout>
-    
+    <div>
+      <NavBar />
+      <Layout>
+        <Titulo />
+        <Productos
+          productos={productos}
+          agregarAlCarro={() => console.log('Agregando al carro')}
+        />
+      </Layout>
+    </div>
+
   )
 }
 
