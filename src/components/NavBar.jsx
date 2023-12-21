@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 
 import Logo from "./Logo";
+import Carro from "./Carro";
 
 const Nav = styled.nav`
 
@@ -18,7 +19,7 @@ const NavBar = () => {
   return (
     <Nav>
       <Logo />
-      <p>Carro</p>
+      <Carro />
     </Nav>
   )
 }
