@@ -3,6 +3,7 @@ import styled from '@emotion/styled'
 import Button from './Button'
 
 const Container = styled.div`
+position: relative;
   border: solid 1px #eee;
   box-shadow: 0 5px 5px rgb(0, 0, 0, .1);
   width: 30%;

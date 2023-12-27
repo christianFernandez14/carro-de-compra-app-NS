@@ -1,13 +1,17 @@
 import styled from '@emotion/styled'
 
 const ButtonCustom = styled.button`
+ position: absolute;
+  right: 10px;
+  bottom: 10px;
   margin-top: 10px;
   background-color: #0a283e;
   color: #fff;
-  padding: 15px 20px;
+  padding: 10px 15px;
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
+  text-transform: uppercase;
 `
 const Button = ({ children, onClick }) => {
   return (
